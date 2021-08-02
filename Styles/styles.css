@@ -1,0 +1,204 @@
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px (iphone SE portrait)
+*/
+@media only screen and (min-width: 310px) and (max-width: 480px) {
+    .profilepic-xs{
+        border: solid 0.6vw #468faf;
+        width:50%;
+    }
+    .profilename-xs{
+        font-size:1.6vw;
+    }
+    .profilenamecontact-xs{
+        font-size:2vw;
+        color: #42c0fb;
+    }
+    .profilenamedesig-xs{
+        font-size:2vw;
+    }
+    .profiletitleleft{
+        font-size: 2.5vw;
+    }
+    .profiledescriptionleft{
+        font-size: 2vw;
+    }
+    .profiletitleright{
+        font-size: 2.5vw;
+    }
+    .profiledescriptionright{
+        font-size: 2vw;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px (iphone SE landscape)
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .profilepic-xs{
+        border: solid 0.6vw #468faf;
+        width:50%;
+    }
+    .profilename-xs{
+        font-size:1.6vw;
+    }
+    .profilenamecontact-xs{
+        font-size:2vw;
+        color: #42c0fb;
+    }
+    .profilenamedesig-xs{
+        font-size:2vw;
+    }
+    .profiletitleleft{
+        font-size: 2.5vw;
+    }
+    .profiledescriptionleft{
+        font-size: 2vw;
+    }
+    .profiletitleright{
+        font-size: 2.5vw;
+    }
+    .profiledescriptionright{
+        font-size: 2vw;
+    }
+    
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px (ipad landscape)
+*/
+
+@media (min-width: 1024px) and (max-width: 768px) {
+    .profilepic-sm{
+        border: solid 0.6vw #468faf;
+        width:50%;
+    }
+    .profilename-sm{
+        font-size:3.2vw;
+    }
+    .profilenamecontact-sm{
+        font-size:2vw;
+        color: #42c0fb;
+    }
+    .profilenamedesig-sm{
+        font-size:1.7vw;
+    }
+    .profiletitleleft{
+        font-size: 2vw;
+    }
+    .profiledescriptionleft{
+        font-size: 1.5vw;
+    }
+    .profiletitleright{
+        font-size: 2vw;
+    }
+    .profiledescriptionright{
+        font-size: 1.5vw;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px (ipad ipadpro portrait)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .profilepic-sm{
+        border: solid 0.6vw #468faf;
+        width:50%;
+    }
+    .profilename-sm{
+        font-size:3.2vw;
+    }
+    .profilenamecontact-sm{
+        font-size:2vw;
+        color: #42c0fb;
+    }
+    .profilenamedesig-sm{
+        font-size:1.7vw;
+    }
+    .profiletitleleft{
+        font-size: 2vw;
+    }
+    .profiledescriptionleft{
+        font-size: 1.5vw;
+    }
+    .profiletitleright{
+        font-size: 2vw;
+    }
+    .profiledescriptionright{
+        font-size: 1.5vw;
+    }    
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px (ipad pro landscape and desktop)
+*/
+
+@media (min-width: 1025px) {
+    .profilepic-md{
+        border: solid 0.6vw #468faf;
+        width:70%;
+    }
+    .profilename-md{
+        font-size:5vw;
+    }
+    .profilenamecontact-md{
+        font-size:1vw;
+        color: #42c0fb;
+    }
+    .profilenamedesig-md{
+        font-size:1.5vw;
+    }
+    .profiletitleleft{
+        font-size: 1.8vw;
+    }
+    .profiledescriptionleft{
+        font-size: 1.3vw;
+    }
+    .profiletitleright{
+        font-size: 1.5vw;
+    }
+    .profiledescriptionright{
+        font-size: 1.3vw;
+    }
+}
+
+
+.headersection{
+    background: #012a4a;
+}
+.linecolor{
+    background: #468faf;
+}
+
+.resumeleftsectionbg
+{
+    background: #f2f2f2;
+}
+
+.profilename{
+   font-size:4vw;
+}
+
+.profilecontactlist li a {
+    color: #42c0fb;
+    text-decoration: none;
+}
+.titlewithline h3 {
+    position: relative;
+}
+.titlewithline h3::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: -8px;
+    right: 1px;
+    background: #000000;
+}

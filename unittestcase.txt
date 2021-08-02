@@ -1,0 +1,8 @@
+iphone SE portrait
+iphone SE landscape
+
+ipad portrait
+ipad landscape
+
+ipad pro portrait
+ipad pro landscape
