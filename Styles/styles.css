@@ -30,6 +30,9 @@
     .profiledescriptionright{
         font-size: 2vw;
     }
+    .piechartlegenditem{
+        font-size: 1.5vw;
+    }
 }
 
 /* 
@@ -64,7 +67,9 @@
     .profiledescriptionright{
         font-size: 2vw;
     }
-    
+    .piechartlegenditem{
+        font-size: 1.5vw;
+    }
 }
 
 /* 
@@ -99,6 +104,9 @@
     .profiledescriptionright{
         font-size: 1.5vw;
     }
+    .piechartlegenditem{
+        font-size: 1vw;
+    }
 }
 
 /* 
@@ -132,6 +140,9 @@
     }
     .profiledescriptionright{
         font-size: 1.5vw;
+    }
+    .piechartlegenditem{
+        font-size: 1vw;
     }    
 }
 
@@ -167,7 +178,14 @@
     .profiledescriptionright{
         font-size: 1.3vw;
     }
+    .piechartlegenditem{
+        font-size: 1.2vw;
+    }
 }
+
+.clear {
+    clear: both
+  }
 
 
 .headersection{
