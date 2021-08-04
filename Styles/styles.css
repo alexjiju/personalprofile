@@ -19,19 +19,19 @@
         font-size:2vw;
     }
     .profiletitleleft{
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .profiledescriptionleft{
-        font-size: 2vw;
+        font-size: 1.7vw;
     }
     .profiletitleright{
-        font-size: 2.5vw;
-    }
-    .profiledescriptionright{
         font-size: 2vw;
     }
+    .profiledescriptionright{
+        font-size: 1.7vw;
+    }
     .piechartlegenditem{
-        font-size: 1vw;
+        font-size: 0.5vw;
     }
 }
 
@@ -56,16 +56,16 @@
         font-size:2vw;
     }
     .profiletitleleft{
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .profiledescriptionleft{
-        font-size: 2vw;
+        font-size: 1.7vw;
     }
     .profiletitleright{
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .profiledescriptionright{
-        font-size: 2vw;
+        font-size: 1.7vw;
     }
     .piechartlegenditem{
         font-size: 1vw;
@@ -93,13 +93,13 @@
         font-size:1.7vw;
     }
     .profiletitleleft{
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
     .profiledescriptionleft{
         font-size: 1.5vw;
     }
     .profiletitleright{
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
     .profiledescriptionright{
         font-size: 1.5vw;
@@ -130,13 +130,13 @@
         font-size:1.7vw;
     }
     .profiletitleleft{
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
     .profiledescriptionleft{
         font-size: 1.5vw;
     }
     .profiletitleright{
-        font-size: 2vw;
+        font-size: 1.8vw;
     }
     .profiledescriptionright{
         font-size: 1.5vw;
@@ -167,19 +167,20 @@
         font-size:1.5vw;
     }
     .profiletitleleft{
-        font-size: 1.8vw;
+        font-size: 1.5vw;
     }
     .profiledescriptionleft{
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
     .profiletitleright{
         font-size: 1.5vw;
     }
     .profiledescriptionright{
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
     .piechartlegenditem{
-        font-size: 1.2vw;
+        font-size: 0.5vw;
+        
     }
 }
 

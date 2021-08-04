@@ -104,7 +104,7 @@
 
                     <h3 class="profiletitleleft">SKILLS HIGHLIGHT</h3>
                     <canvas id="skillpiecanvas"></canvas>
-                    <div id="skillspielegend" class="container-fluid px-2"></div>
+                    <div id="skillspielegend" class="container-fluid pt-2 px-1 py-1"></div>
                                       
                     <h3 class="profiletitleleft">LANGUAGES KNOWN</h3>
                     languages chart goes here
@@ -226,17 +226,10 @@
         legendCallback: function(chart) {
           var text = [];
           text.push('<ul class="list-unstyled row">');
-          /*for (var i = 0; i < chart.data.datasets.length; i++) {
-            text.push('<li><div class="legendValue"><span style="background-color:' + chart.data.datasets[i].backgroundColor + '">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
-            if (chart.data.datasets[i].label) {
-            text.push('<span class="label">' + chart.data.datasets[i].label + '</span>');
-            }
-            text.push('</div></li><div class="clear"></div>');
-          }*/
           for (var i = 0; i < xValues.length; i++) {
-            text.push('<li class="list-item col-6 piechartlegenditem"><div class="legendValue"><span style="background-color:' + barColors[i] + '">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+            text.push('<li class="list-item col-6 mb-1 piechartlegenditem"><div><span style="margin-right: 0.3vw; background-color:' + barColors[i] + '">&nbsp;&nbsp;&nbsp;</span>');
             if (xValues[i]) {
-            text.push('<span class="label">' + xValues[i] + '</span>');
+            text.push('<span>' + xValues[i] + '</span>');
             }
             text.push('</div></li>');
           }
