@@ -44,6 +44,7 @@ var LanguageChart = new function(){
   },
   options: {
     responsive: true,
+    maintainAspectRatio:true,
     legend: {
       display:false,
       position: 'bottom',
