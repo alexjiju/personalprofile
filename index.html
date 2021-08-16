@@ -107,8 +107,11 @@
                     <div id="skillspielegend" class="container-fluid pt-2 px-1 py-1"></div>
                                       
                     <h3 class="profiletitleleft">LANGUAGES KNOWN</h3>
-                    languages chart goes here
-
+                    <div >
+                      <canvas id="canvas"></canvas>
+                    </div>
+                  
+                  
                     <h3 class="profiletitleleft">ACTIVITIES & INTERESTS</h3>
                     <ul class="list-unstyled">
                       <l>Travel</li>
@@ -161,7 +164,9 @@
                   Team player in many web-based service projects includes ASP.Net, PHP, JSP.</p>
 
                   <span class="titlewithline"><h3 class="profiletitleright">SKILLS</h3></span>
-                  skills chart goes here
+                  <div >
+                    <canvas id="horizontalBarChartCanvas"></canvas>
+                  </div>
 
                   <span class="titlewithline"><h3 class="profiletitleright">EDUCATION</h3></span>
                   <p>Graduate in Economics and Statistics – Mahatma Gandhi University, Kerala, India
@@ -188,85 +193,112 @@
     <script src="https://kit.fontawesome.com/d11bd2e362.js" crossorigin="anonymous"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="scripts/skillpiechart.js"></script>
+    <script src="scripts/languagechart.js"></script>
     <script>
     $( document ).ready(function() {
-      var xValues = ["ASP.net MVC", "C#", ".Net Core", "JS Frameworks"];
-      var yValues = [44, 49, 15, 55];
-      var barColors = [
-        "#61a5c2",
-        "#01497c",
-        "#2c7da0",
-        "#89c2d9"
-      ];
+      SkillPieChart.Initialize();
+      LanguageChart.Initialize();
 
-      var ctx = $("#skillpiecanvas").get(0).getContext("2d");
-
-      var chart = new Chart(ctx, {
-        type: "pie",
-        data: {
-          labels: xValues,
-          datasets: [{
-            label: xValues,
-            backgroundColor: barColors,
-            data: yValues
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-            legend:{
-            display: false,
-              position:"bottom"
-          },
-          elements:{
-            arc:{
-                borderWidth:0
+      var horizontalBarChart = new Chart(horizontalBarChartCanvas, {
+   type: 'horizontalBar',
+   data: {
+      labels: ["ASP.Net MVC4", "C#", "Entity Framework 5", "HP Fortify Code Analysis", "SQL Server", "MySQL", "T-SQL"],
+      datasets: [{
+         data: [2000, 4000, 6000, 8000, 10000, 12000, 14000],
+         backgroundColor: ["#2c7da0", "#2c7da0", "#2c7da0", "#2c7da0", "#2c7da0", "#2c7da0", "#2c7da0"], 
+      }]
+   },
+   options: {
+      tooltips: {
+        enabled: false
+      },
+      responsive: true,
+      legend: {
+         display: false,
+         position: 'bottom',
+         fullWidth: true,
+         labels: {
+           //boxWidth: 10,
+           //padding: 50
+         }
+      },
+      scales: {
+         yAxes: [{
+           barPercentage: 0.75,
+           gridLines: {
+             display: false,
+             drawTicks: false,
+             drawOnChartArea: false
+           },
+           ticks: {
+             //fontColor: '#555759',
+             //fontFamily: 'Lato',
+             
             }
+           
+            
+         }],
+         xAxes: [{
+             gridLines: {
+               display: false,
+               drawTicks: false,
+               tickMarkLength: 5,
+               drawBorder: false
+             },
+           ticks: {
+             display:false,
+             //padding: 5,
+             beginAtZero: true,
+             //fontColor: '#555759',
+             //fontFamily: 'Lato',
+             //fontSize: 11,
+             callback: function(label, index, labels) {
+              return label/1000;
+             }
+               
+           },
+            scaleLabel: {
+              display: false,
+              //padding: 10,
+              //fontFamily: 'Lato',
+              //fontColor: '#555759',
+              //fontSize: 16,
+              //fontStyle: 700,
+              labelString: 'Scale Label'
+            },
+           
+         }]
+      },
+      plugins: {
+      datalabels: {
+        anchor: 'end',
+        align: 'end',
+        backgroundColor: null,
+        borderColor: null,
+        borderRadius: 4,
+        borderWidth: 1,
+        color: '#223388',
+        font: function(context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+        	return {
+          	size: 120
+            //weight: 600
+          };
         },
-        legendCallback: function(chart) {
-          var text = [];
-          text.push('<ul class="list-unstyled row">');
-          for (var i = 0; i < xValues.length; i++) {
-            text.push('<li class="list-item col-6 mb-1 piechartlegenditem"><div><span style="margin-right: 0.3vw; background-color:' + barColors[i] + '">&nbsp;&nbsp;&nbsp;</span>');
-            if (xValues[i]) {
-            text.push('<span>' + xValues[i] + '</span>');
-            }
-            text.push('</div></li>');
-          }
-          text.push('</ul>');
-          return text.join('');
+        offset: 4,
+        padding: 0,
+        formatter: function(value) {
+        	return Math.round(value * 10) / 10
         }
-        }
-      });
+      }
+    }
+   }
+   
+});
 
-      chart.data.datasets.forEach(((set) => {
-        set.backgroundColor.forEach((bgColor) => {
-            const _stroke = ctx.stroke;
-            /*ctx.stroke = function () {
-                ctx.save();
-                ctx.shadowColor = "#c3c3c3";
-                ctx.shadowBlur = 1;
-                ctx.shadowOffsetX = 20;
-                ctx.shadowOffsetY = 20;
-                _stroke.apply(this, arguments);
-                ctx.restore();
-            };*/
-
-            const _fill = ctx.fill;
-            ctx.fill = function () {
-                ctx.save();
-                ctx.shadowColor = "#c3c3c3";
-                ctx.shadowBlur = 7;
-                ctx.shadowOffsetX = -9;
-                ctx.shadowOffsetY = 3;
-                _fill.apply(this, arguments);
-                ctx.restore();
-            };
-        });
-    }));
-
-    $('#skillspielegend').prepend(chart.generateLegend());
-  });
+    });
       </script>
 </body>
 </html>

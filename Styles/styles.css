@@ -221,3 +221,22 @@
     right: 1px;
     background: #000000;
 }
+
+.chart-container{
+    width: auto;
+    min-height: 150px;
+    border:0px solid black;
+    margin:0 auto;
+
+
+}
+#chart {
+            width: 100% !important;
+            max-width: 800px;
+            height: auto !important;
+}
+
+/*canvas#horizontalBarChartCanvas {
+    max-width: 768px;
+    margin: 40px auto;
+  }*/
