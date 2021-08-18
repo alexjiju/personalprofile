@@ -52,16 +52,16 @@
         <div class="container-fluid justify-content-center">
           <div class="container">
             <div class="row align-items-end text-white">
-              <div class="col-md-4 col-12">
+              <div class="col-4">
                 <img src="images/Jiju_photo.jpg" class="rounded-circle img-fluid profilepic-xs profilepic-sm profilepic-md" alt="Profile Pic" data-holder-rendered="true"> 
               </div>
-              <div class="col-md-4 col-12 mx-auto">
+              <div class="col-4 mx-auto">
                 <ul class="list-unstyled">
                   <li><h1 class="profilename">JIJU ALEX</h1></li>
                   <li><h3 class="profilenamedesig-xs profilenamedesig-sm profilenamedesig-md">ASSISTANT MANAGER - DEV</h3></li>
                   </ul>
               </div>
-              <div class="col-md-4 col-12 mx-auto">
+              <div class="col-4 mx-auto">
                 <ul class="list-unstyled profilecontactlist">
                   <li class="profilenamecontact-xs profilenamecontact-sm profilenamecontact-md"><i class="fas fa-at"></i><span class="m-2">alexjiju@gmail.com</span></li>
                   <li class="profilenamecontact-xs profilenamecontact-sm profilenamecontact-md"><i class="fas fa-mobile-alt"></i><span class="m-2">(0091)8281204080</span></li>
@@ -189,9 +189,15 @@
       </section>
       <section class="headersection">
         <div class="container-fluid justify-content-center">
-          <div class="container">
-            <div class="row align-items-end text-white">
-              <div class="col-12"></div>
+          <div class="container footerspacing-md footerspacing-sm footerspacing-xs">
+            <div class="row">
+              <div class="col-6">&nbsp;</div>
+              <div class="col-6 footerlinks my-auto">
+                <ul class="list-inline footercontactlist" style="text-align: right;">
+                  <li class="list-inline-item footernamecontact-xs footernamecontact-sm footernamecontact-md"><i class="fas fa-at"></i><span>alexjiju@gmail.com</span></li>
+                  <li class="list-inline-item footernamecontact-xs footernamecontact-sm footernamecontact-md"><i class="fas fa-mobile-alt"></i><span>(0091)8281204080</span></li>
+                  </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -213,13 +219,14 @@
       LanguageChart.Initialize();
       SkillBarChart.Initialize();
       
-      window.onresize = function(){
+      /*window.onresize = function(){
         var displaySize = Utilities.getDevice()[0];
+        alert(prevScreenWidth + ' : '+ displaySize);
         if(prevScreenWidth == 0 || prevScreenWidth != displaySize){
           LanguageChart.Initialize();
           SkillBarChart.Initialize();
         }
-      };
+      };*/
 
     });
       </script>

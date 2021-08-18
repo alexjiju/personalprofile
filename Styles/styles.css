@@ -6,17 +6,17 @@
 @media only screen and (min-width: 310px) and (max-width: 480px) {
     .profilepic-xs{
         border: solid 0.6vw #468faf;
-        width:50%;
+        width:100%;
     }
     .profilename-xs{
         font-size:1.6vw;
     }
     .profilenamecontact-xs{
-        font-size:2vw;
+        font-size:1.5vw;
         color: #42c0fb;
     }
     .profilenamedesig-xs{
-        font-size:2vw;
+        font-size:1.5vw;
     }
     .profiletitleleft{
         font-size: 2vw;
@@ -33,6 +33,13 @@
     .piechartlegenditem{
         font-size: 0.5vw;
     }
+    .footernamecontact-xs{
+        font-size:1vw;
+        color: #42c0fb;
+    }
+    .footerspacing-xs{
+        padding-top: 5px;
+    }
 }
 
 /* 
@@ -43,17 +50,17 @@
 @media (min-width: 481px) and (max-width: 767px) {
     .profilepic-xs{
         border: solid 0.6vw #468faf;
-        width:50%;
+        width:100%;
     }
     .profilename-xs{
         font-size:1.6vw;
     }
     .profilenamecontact-xs{
-        font-size:2vw;
+        font-size:1.5vw;
         color: #42c0fb;
     }
     .profilenamedesig-xs{
-        font-size:2vw;
+        font-size:1.5vw;
     }
     .profiletitleleft{
         font-size: 2vw;
@@ -69,6 +76,13 @@
     }
     .piechartlegenditem{
         font-size: 1vw;
+    }
+    .footernamecontact-xs{
+        font-size:1vw;
+        color: #42c0fb;
+    }
+    .footerspacing-xs{
+        padding-top: 5px;
     }
 }
 
@@ -86,7 +100,7 @@
         font-size:3.2vw;
     }
     .profilenamecontact-sm{
-        font-size:2vw;
+        font-size:1.4vw;
         color: #42c0fb;
     }
     .profilenamedesig-sm{
@@ -106,6 +120,13 @@
     }
     .piechartlegenditem{
         font-size: 1vw;
+    }
+    .footernamecontact-sm{
+        font-size:1vw;
+        color: #42c0fb;
+    }
+    .footerspacing-sm{
+        padding-top: 4px;
     }
 }
 
@@ -123,7 +144,7 @@
         font-size:3.2vw;
     }
     .profilenamecontact-sm{
-        font-size:2vw;
+        font-size:1.5vw;
         color: #42c0fb;
     }
     .profilenamedesig-sm{
@@ -143,7 +164,14 @@
     }
     .piechartlegenditem{
         font-size: 1vw;
-    }    
+    } 
+    .footernamecontact-sm{
+        font-size:1vw;
+        color: #42c0fb;
+    }   
+    .footerspacing-sm{
+        padding-top: 4px;
+    }
 }
 
 /* 
@@ -180,7 +208,13 @@
     }
     .piechartlegenditem{
         font-size: 0.5vw;
-        
+    }
+    .footernamecontact-md{
+        font-size:1vw;
+        color: #42c0fb;
+    }
+    .footerspacing-md{
+        padding-top: 16px;
     }
 }
 
@@ -202,10 +236,14 @@
 }
 
 .profilename{
-   font-size:4vw;
+   font-size:3vw;
 }
 
 .profilecontactlist li a {
+    color: #42c0fb;
+    text-decoration: none;
+}
+.footercontactlist li a {
     color: #42c0fb;
     text-decoration: none;
 }
@@ -220,6 +258,11 @@
     bottom: -8px;
     right: 1px;
     background: #000000;
+}
+.footerlinks ul li{
+    /*display: inline;*/
+    /*padding: 2px;*/
+    
 }
 
 .chart-container{
