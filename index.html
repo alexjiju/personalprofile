@@ -207,15 +207,19 @@
     <script src="scripts/languagechart.js"></script>
     <script src="scripts/skillbarchart.js"></script>
     <script>
+      var prevScreenWidth = 0;
     $( document ).ready(function() {
       SkillPieChart.Initialize();
       LanguageChart.Initialize();
       SkillBarChart.Initialize();
-
+      
       window.onresize = function(){
-        LanguageChart.Initialize();
-        SkillBarChart.Initialize();
-    };
+        var displaySize = Utilities.getDevice()[0];
+        if(prevScreenWidth == 0 || prevScreenWidth != displaySize){
+          LanguageChart.Initialize();
+          SkillBarChart.Initialize();
+        }
+      };
 
     });
       </script>
