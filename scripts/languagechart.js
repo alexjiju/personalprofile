@@ -11,35 +11,20 @@ var LanguageChart = new function(){
     datasets: [{
       label: "Tamil",
       data:[1,1],
-      fill: false,
-      borderWidth: function(){
-               return 1;
-             }
+      fill: false
     }, {
       label: "Malayalam",
-      //data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
       data:[2,2,2,2],
-      fill: false,
-      borderWidth: function(){
-               return 1;
-             }
+      fill: false
     }, {
       label: "Hindi",
-      //data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
       data:[3,3,3,3],
-      fill: false,
-      borderWidth: function(){
-               return 1;
-             }
+      fill: false
     }, {
       label: "English",
-      //data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
       data:[4,4,4,4],
-      //lineTension: 5,
-      fill: false,
-      borderWidth: function(){
-               return 1;
-             }
+      //lineTension: -5,
+      fill: false
     }]
   },
   options: {
@@ -51,7 +36,7 @@ var LanguageChart = new function(){
     },
     layout:{
       padding:{
-        right:5
+        right:6
         
       }
     },
@@ -74,7 +59,7 @@ var LanguageChart = new function(){
         },
         ticks: {
           min: 0,
-          max: 4,
+          max: 4.3,
           stepSize: 1,
           suggestedMin: 0.5,
           suggestedMax: 5.5,
@@ -100,22 +85,73 @@ var LanguageChart = new function(){
   }
 };
 
-$.each(config.data.datasets, function(i, dataset) {
-  var background = '#2c7da0';//randomColor(0.5);
-  dataset.borderColor = background;
-  dataset.borderWidth=2;
-  dataset.backgroundColor = background;
-  dataset.pointBorderColor = background; 
-  dataset.pointBackgroundColor = background;
-  dataset.pointBorderWidth = 0;
-  
-});
+
 
 
 var ctx = document.getElementById("canvas").getContext("2d");
 window.myLine = new Chart(ctx, config);
   
+var screenWidth = Utilities.getDevice()[0];
+var screenHeight = Utilities.getDevice()[1]
 
+if(screenWidth >= 320 && screenWidth <= 480){
+  window.myLine.options.scales.yAxes[0].ticks.minor.fontSize = 3;
+  $.each(config.data.datasets, function(i, dataset) {
+    var background = '#2c7da0';//randomColor(0.5);
+    dataset.borderColor = background;
+    dataset.borderWidth=1;
+    dataset.backgroundColor = background;
+    //dataset.pointBorderColor = background; 
+    //dataset.pointBackgroundColor = '#BF391D';
+    //dataset.pointBorderWidth = 1;
+    dataset.pointRadius=1;
+    
+  });
+}
+else if(screenWidth >= 481 && screenWidth <= 767){
+  window.myLine.options.scales.yAxes[0].ticks.minor.fontSize = 7;
+  $.each(config.data.datasets, function(i, dataset) {
+    var background = '#2c7da0';//randomColor(0.5);
+    dataset.borderColor = background;
+    dataset.borderWidth=2;
+    dataset.backgroundColor = background;
+    //dataset.pointBorderColor = background; 
+    //dataset.pointBackgroundColor = '#BF391D';
+    //dataset.pointBorderWidth = 1;
+    dataset.pointRadius=2;
+    
+  });
+}
+else if(screenWidth >= 768 && screenWidth <= 1020){
+  window.myLine.options.scales.yAxes[0].ticks.minor.fontSize = 10;
+  $.each(config.data.datasets, function(i, dataset) {
+    var background = '#2c7da0';//randomColor(0.5);
+    dataset.borderColor = background;
+    dataset.borderWidth=3;
+    dataset.backgroundColor = background;
+    //dataset.pointBorderColor = background; 
+    //dataset.pointBackgroundColor = '#BF391D';
+    //dataset.pointBorderWidth = 1;
+    dataset.pointRadius=3;
+    
+  });
+}
+else if(screenWidth >= 1024){
+  window.myLine.options.scales.yAxes[0].ticks.minor.fontSize = 14;
+  $.each(config.data.datasets, function(i, dataset) {
+    var background = '#2c7da0';//randomColor(0.5);
+    dataset.borderColor = background;
+    dataset.borderWidth=4;
+    dataset.backgroundColor = background;
+    //dataset.pointBorderColor = background; 
+    //dataset.pointBackgroundColor = '#BF391D';
+    //dataset.pointBorderWidth = 1;
+    dataset.pointRadius=4;
+    
+  });
+}
+  
+window.myLine.update();
 
 
     }
