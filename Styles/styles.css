@@ -4,6 +4,9 @@
   ##Screen = B/w 320px to 479px (iphone SE portrait)
 */
 @media only screen and (min-width: 310px) and (max-width: 480px) {
+    #navbarSupportedContent ul li a {
+        font-size:2vw;
+    }
     .profilepic-xs{
         border: solid 0.6vw #468faf;
         width:100%;
@@ -48,6 +51,9 @@
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+    #navbarSupportedContent ul li a {
+        font-size:2vw;
+    }
     .profilepic-xs{
         border: solid 0.6vw #468faf;
         width:100%;
@@ -136,6 +142,7 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    
     .profilepic-sm{
         border: solid 0.6vw #468faf;
         width:50%;
