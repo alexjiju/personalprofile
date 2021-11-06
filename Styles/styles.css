@@ -11,6 +11,9 @@
         border: solid 0.6vw #468faf;
         width:100%;
     }
+    .badge-xs{
+        width:10%;
+    }
     .profilename-xs{
         font-size:1.6vw;
     }
@@ -58,6 +61,9 @@
         border: solid 0.6vw #468faf;
         width:100%;
     }
+    .badge-xs{
+        width:10%;
+    }
     .profilename-xs{
         font-size:1.6vw;
     }
@@ -101,6 +107,9 @@
     .profilepic-sm{
         border: solid 0.6vw #468faf;
         width:50%;
+    }
+    .badge-sm{
+        width:10%;
     }
     .profilename-sm{
         font-size:3.2vw;
@@ -147,6 +156,9 @@
         border: solid 0.6vw #468faf;
         width:50%;
     }
+    .badge-sm{
+        width:10%;
+    }
     .profilename-sm{
         font-size:3.2vw;
     }
@@ -190,6 +202,9 @@
     .profilepic-md{
         border: solid 0.6vw #468faf;
         width:70%;
+    }
+    .badge-md{
+        width:10%;
     }
     .profilename-md{
         font-size:5vw;
